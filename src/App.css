@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+h1 {
+  font-size: 2em;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+}
+
+body {
+  background-color: black;
+}
+
+#bg {
+  background-image: url("/public/bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+main {
+  padding-top: 2em;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+header {
+  background-color: white;
+  border-bottom: 4px solid #f4ce14;
+  text-align: center;
+  padding: 5px 0;
+}
+
+form {
+  padding: 4em 0 8em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  font-size: 1.4em;
+  margin-bottom: 12px;
+  font-weight: 600;
+  color: white;
+
+  text-align: left;
+}
+
+input,
+select {
+  margin-bottom: 3em;
+  padding: 10px;
+  border: #495e57 2px solid;
+  border-radius: 4px;
+  background-color: white;
+  font-size: 1.2em;
+  min-width: 300px;
+}
+
+.selectDiners {
+  margin-bottom: 4em;
+}
+
+.selectDiners button {
+  background-color: #495e57;
+  color: #f4ce14;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  aspect-ratio: 1/1;
+  font-size: 1.4em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.selectDiners button:disabled {
+  opacity: 0.8;
+}
+
+.selectDiners button:hover {
+  transform: scale(1.2);
+}
+
+.selectDiners span {
+  margin: 0 4em;
+  font-size: 1.6em;
+  color: white;
+}
+
+#confirm {
+  background-color: #495e57;
+  border: none;
+  border-radius: 4px;
+  color: #f4ce14;
+  font-size: 1.5em;
+  padding: 15px 50px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+#confirm:hover {
+  transform: scale(1.1);
+}
+
+.feedback {
+  width: 300px;
+  padding: 10px 30px;
+  border-radius: 4px;
+  margin-bottom: 1em;
+}
+
+.feedback.success {
+  background-color: rgba(24, 179, 19, 0.281);
+  border-color: rgb(29, 245, 10);
+  border: 2px solid;
+  color: rgb(29, 245, 10);
+}
+
+.feedback.error {
+  background-color: rgba(179, 19, 19, 0.281);
+  border-color: red;
+  border: 2px solid;
+  color: red;
+}
