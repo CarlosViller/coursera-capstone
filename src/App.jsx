@@ -19,6 +19,7 @@ function App() {
       setFeedback({ error: true, message: "Phone number is required" });
     } else {
       setLoading(true);
+      setFeedback(null);
 
       setTimeout(() => {
         setFeedback({
