@@ -1,5 +1,7 @@
 import { useState } from "react";
 import "./App.css";
+import SelectDiners from "./SelectDiners";
+import SelectTime from "./SelectTime";
 
 function App() {
   const [date, setDate] = useState(new Date());
@@ -51,41 +53,8 @@ function App() {
                 onChange={(e) => setDate(e.target.value)}
               />
 
-              <label htmlFor="time">Time</label>
-              <select
-                name="time"
-                value={time}
-                onChange={(e) => setTime(e.target.value)}
-              >
-                <option value="12:00pm">12:00pm</option>
-                <option value="12:30pm">12:30pm</option>
-                <option value="1:00pm">1:00pm</option>
-                <option value="1:30pm">1:30pm</option>
-                <option value="2:00pm">2:00pm</option>
-                <option value="2:30pm">2:30pm</option>
-                <option value="3:00pm">3:00pm</option>
-                <option value="3:30pm">3:30pm</option>
-                <option value="4:00pm">4:00pm</option>
-              </select>
-
-              <label htmlFor="diners">Diners</label>
-              <section className="selectDiners">
-                <button
-                  type="button"
-                  disabled={diners === 1}
-                  onClick={() => setDiners(diners - 1)}
-                >
-                  -
-                </button>
-                <span>{diners}</span>
-                <button
-                  type="button"
-                  disabled={diners === 10}
-                  onClick={() => setDiners(diners + 1)}
-                >
-                  +
-                </button>
-              </section>
+              <SelectTime time={time} setTime={setTime} />
+              <SelectDiners diners={diners} setDiners={setDiners} />
 
               <label htmlFor="fullname">Full Name</label>
               <input
