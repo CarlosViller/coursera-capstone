@@ -1,5 +1,11 @@
-// eslint-disable-next-line react/prop-types
-export default function SelectTime({ time, setTime }) {
+/* eslint-disable @typescript-eslint/no-explicit-any */
+export default function SelectTime({
+  time,
+  setTime,
+}: {
+  time: any;
+  setTime: any;
+}) {
   return (
     <>
       <label htmlFor="time">Time</label>

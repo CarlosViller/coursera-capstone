@@ -1,5 +1,12 @@
-// eslint-disable-next-line react/prop-types
-export default function SelectDiners({ diners, setDiners }) {
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
+export default function SelectDiners({
+  diners,
+  setDiners,
+}: {
+  diners: any;
+  setDiners: any;
+}) {
   return (
     <>
       <label htmlFor="diners">Diners</label>
